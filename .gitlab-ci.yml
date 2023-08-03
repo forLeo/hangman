@@ -1,0 +1,19 @@
+image: node:18.17.0
+pages: 
+    cache: 
+        paths: 
+            - node_modules/
+    stage: deploy
+    script: 
+        - npm install -g @angular/cli@16.1.7
+        - npm ci
+        - ng build --configuration production
+        - mkdir -p public/
+        - mv dist/hangman/* public/
+
+    artifacts:
+        paths:
+            - public
+    only:
+        - main
+        - pages
