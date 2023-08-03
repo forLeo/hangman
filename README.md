@@ -1,6 +1,6 @@
 # Hangman
 
-https://traineeships.pages.code.flender.cloud/angular/hangman
+https://forleo.github.io/hangman
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
