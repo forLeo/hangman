@@ -1,0 +1,27 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.17.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.17.0'
+      - name: Install Dependencies
+        run: npm install
+        run: npm ci
+      - name: Build Angular App
+        run: ng build --prod --aot
+      - name: Deploy to Github Pages Hosting
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: dist/hangman
