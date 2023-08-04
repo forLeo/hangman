@@ -23,7 +23,7 @@ jobs:
           npm install
           npm ci
       - name: Build Angular App
-        run: ng build --prod
+        run: ng build --prod --aot
         
       - name: Checkout gh-pages
         run: git checkout gh-pages
