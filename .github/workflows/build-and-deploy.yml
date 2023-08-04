@@ -24,7 +24,7 @@ jobs:
           npm ci
           npm install -g @angular/cli@16.1.7
       - name: Build Angular App
-        run: ng build --prod --aot
+        run: ng build --configuration production  --aot
         
       - name: Checkout gh-pages
         run: git checkout gh-pages
