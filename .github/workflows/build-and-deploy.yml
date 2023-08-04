@@ -14,10 +14,10 @@ jobs:
       - name: Remove Build Files from Main Branch
         run: rm -rf dist/
         
-      - name: Use Node.js 18.17.0
+      - name: Use Node.js 16
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '16'
       - name: Install Dependencies
         run: |
           npm install
