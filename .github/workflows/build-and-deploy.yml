@@ -31,7 +31,6 @@ jobs:
     
       - name: Clear and Update gh-pages Branch
         run: |
-          git rm -rf .
           git commit -m "Clear gh-pages branch" --allow-empty
           cp -r dist/hangman/* .
           git add .
