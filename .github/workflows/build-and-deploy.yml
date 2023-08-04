@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Remove Build Files from Main Branch
         run: rm -rf dist/
-        
+    
       - name: Use Node.js 16
         uses: actions/setup-node@v2
         with:
@@ -23,20 +23,18 @@ jobs:
           npm install -g @angular/cli@16.1.7
       - name: Build Angular App
         run: ng build --configuration production  --aot
-        
-      - name: Checkout gh-pages
-        run: git checkout gh-pages
-        
-      - name: Clear gh-pages branch
+    
+      - name: Checkout gh-pages Branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+    
+      - name: Clear and Update gh-pages Branch
         run: |
           git rm -rf .
           git commit -m "Clear gh-pages branch" --allow-empty
-          git push origin gh-pages
-        
-      - name: Copy files to gh-pages
-        run: |
           cp -r dist/hangman/* .
           git add .
-          git commit -m "Update gh-pages" --allow-empty
+          git commit -m "Update gh-pages branch" --allow-empty
           git push origin gh-pages
           rm -rf dist/
