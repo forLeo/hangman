@@ -10,35 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Remove Build Files from Main Branch
-        run: rm -rf dist/
-        
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Install Dependencies
-        run: |
-          npm install
-          npm ci
-          npm install -g @angular/cli@16.1.7
-      - name: Build Angular App
-        run: ng build --configuration production  --aot
-        
-      - name: Checkout gh-pages
-        run: git checkout gh-pages
-        
-      - name: Clear gh-pages branch
-        run: |
-          git rm -rf .
-          git commit -m "Clear gh-pages branch" --allow-empty
-          git push origin gh-pages
-        
-      - name: Copy files to gh-pages
-        run: |
-          cp -r dist/hangman/* .
-          git add .
-          git commit -m "Update gh-pages" --allow-empty
-          git push origin gh-pages
-          rm -rf dist/
+  - uses: actions/checkout@v2
+  - name: Remove Build Files from Main Branch
+    run: rm -rf dist/
+    
+  - name: Use Node.js 16
+    uses: actions/setup-node@v2
+    with:
+      node-version: '16'
+  - name: Cache Node Modules
+    uses: actions/cache@v2
+    with:
+      path: ~/.npm
+      key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      restore-keys: |
+        ${{ runner.os }}-node-
+  - name: Install Dependencies
+    run: |
+      npm install
+      npm ci
+      npm install -g @angular/cli@16.1.7
+  - name: Build Angular App
+    run: ng build --configuration production  --aot
+    
+  - name: Checkout gh-pages Branch
+    uses: actions/checkout@v2
+    with:
+      ref: gh-pages
+    
+  - name: Deploy Angular App to GitHub Pages
+    uses: angular-schule/angular-cli-ghpages@v1
+    with:
+      dir: dist/hangman
