@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: '18'
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm ci
       - name: Build Angular App
         run: ng build --prod
         
