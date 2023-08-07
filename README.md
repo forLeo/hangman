@@ -8,9 +8,9 @@ https://forleo.github.io/hangman
 
 ## Example pictures
 
-![Image](https://raw.githubusercontent.com/forLeo/hangman/main/Pictures/example%20(1).png)
+<img src="https://raw.githubusercontent.com/forLeo/hangman/main/Pictures/example%20(1).png" width="640"/>
 
-![Image](https://raw.githubusercontent.com/forLeo/hangman/main/Pictures/example%20(2).png)
+<img src="https://raw.githubusercontent.com/forLeo/hangman/main/Pictures/example%20(2).png" width="640"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
