@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install
           npm ci
-          npm install -g @angular/cli@16.1.7 requires critters@0.0.19
+          npm install -g @angular/cli@16.1.7 requires critters@0.0.20
 
       - name: Build Angular App
         run: ng build --configuration production --aot
