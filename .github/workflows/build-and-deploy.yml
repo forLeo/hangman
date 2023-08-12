@@ -20,6 +20,7 @@ jobs:
         run: |
           npm install
           npm ci
+          npm install -g @angular/cli@16.1.7
 
       - name: Build Angular App
         run: ng build --configuration production --aot
