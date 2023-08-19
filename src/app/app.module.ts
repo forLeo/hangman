@@ -3,22 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WordDisplayComponent } from './word-display/word-display.component';
-import { HangmanImageComponent } from './hangman-image/hangman-image.component';
-import { GuessedLettersComponent } from './guessed-letters/guessed-letters.component';
-import { UserInputComponent } from './user-input/user-input.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WordDisplayComponent,
-    HangmanImageComponent,
-    GuessedLettersComponent,
-    UserInputComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,3 +31,4 @@ HttpClientInMemoryWebApiModule.forRoot(
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class GameModule { }

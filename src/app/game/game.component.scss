@@ -1,0 +1,68 @@
+@import "../../scss/variables.scss";
+
+.hangmanImg {
+    color: red;
+    display: flex;
+    width: 300px;
+    height: 225px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hangmanImgPositionBLOCKED {
+    width: 300px;
+    height: 225px;
+    max-width: 300px;
+}
+
+.wordSearched {
+    display: flex;
+    text-decoration-line: underline;
+    text-underline-offset: 2.5px;
+}
+
+.wordSearchedPositionBLOCKED {
+    position: absolute;
+    top: 155px;
+    left: 250px;
+    max-width: 75px;
+}
+
+.divTable {
+    font-family: Arial;
+    border-spacing: 5px;
+}
+
+.divTablePositionBLOCKED {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    max-width: 75px;
+}
+
+.divTableCell {
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.blackSvg {
+    fill-opacity: 0;
+    filter: brightness(0) saturate(100%);
+}
+
+div {
+    color: $fontColor;
+}
+.divTable .divTableCell, .divTable .divTableHead {
+    color: $fontColor;
+}
+
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}

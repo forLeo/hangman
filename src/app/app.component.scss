@@ -9,72 +9,8 @@
     width: 30px;
 }
 
-.hangmanImg {
-    color: red;
+.game {
     display: flex;
-    width: 300px;
-    height: 225px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-}
-
-.hangmanImgPosition {
-    position: relative;
-    width: 300px;
-    height: 225px;
-    top: 247px;
-    left: 367px;
-    max-width: 300px;
-}
-
-.wordSearched {
-    display: flex;
-    text-decoration-line: underline;
-    text-underline-offset: 2.5px;
-}
-
-.wordSearchedPosition {
-    position: relative;
-    top: 80px;
-    left: 640px;
-    max-width: 75px;
-}
-
-.divTable {
-    font-family: Arial;
-    border-spacing: 5px;
-}
-
-.divTablePosition {
-    position: relative;
-    top: 100px;
-    left: 640px;
-    max-width: 75px;
-}
-
-.divTableCell {
-    border: solid;
-    border-width: 1px;
-    padding: 10px;
-}
-
-.blackSvg {
-    fill-opacity: 0;
-    filter: brightness(0) saturate(100%);
-}
-
-div {
-    color: $fontColor;
-}
-.divTable .divTableCell, .divTable .divTableHead {
-    color: $fontColor;
-}
-/* HTMLtable.com */
-.divTable{ display: table; }
-.divTableRow { display: table-row; }
-.divTableHeading { display: table-header-group;}
-.divTableCell, .divTableHead { display: table-cell;}
-.divTableHeading { display: table-header-group;}
-.divTableFoot { display: table-footer-group;}
-.divTableBody { display: table-row-group;}
+  }  
