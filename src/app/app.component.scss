@@ -10,7 +10,8 @@
 }
 
 .game {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    position: absolute;
+    top: 8vh;
+    left: 17.5vw;
   }  
