@@ -1,0 +1,16 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null">
+   <desc stroke="null">Created with Fabric.js 3.6.6</desc>
+
+   <g stroke="null" transform="matrix(7.58406 0 0 8.13521 434.433 -916.715)">
+    <text stroke=" none" x="70.54064" y="230.25258" fill-rule=" nonzero" fill=" rgb(0,0,0)" stroke-miterlimit="4" stroke-linejoin=" miter" stroke-dashoffset="0" stroke-linecap=" butt" stroke-dasharray=" none" font-weight="normal" font-style="normal" font-size="18" font-family="'Open Sans', sans-serif" xml:space="preserve">
+     <tspan stroke="null" fill=" rgb(255,0,0)" y="152.26355" x="-50.00189">GAME</tspan>
+     <tspan stroke="null" fill=" rgb(255,0,0)" y="175.85355" x="-47.59189">OVER</tspan>
+    </text>
+   </g>
+  </g>
+ </g>
+</svg>
