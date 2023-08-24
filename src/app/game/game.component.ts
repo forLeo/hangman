@@ -10,9 +10,24 @@ let falseChars = 0;
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
+
 export class GameComponent {
+  public word!: string;
+  ngOnInit() {
+    this.word = wordsService.getRandomWord();
+    console.log(this.word)
+    for (let count = 0; count < this.word.length; count++) {
+      let p = document.createElement('p');
+      p.textContent = this.word[count];
+      p.setAttribute('id', 'char' + (count + 1));
+      document.getElementById("wordSearched")!.appendChild(p);
+      document.getElementById("wordSearched")!.style.color = "transparent";
+    }
+  }
+
   letterClicked(event: any) : void {
     let id = event.target.id;
+    let letter = String.fromCharCode(parseInt(id) + 64);
     console.log(id);
     let element = document.getElementById(id);
     if (element != null)
@@ -20,21 +35,16 @@ export class GameComponent {
       element.style.color = "rgb(196, 196, 196)";
       element.setAttribute("style", "border: transparent");
     }
-    falseChar();
-  }
-
-  ngOnInit() {
-    let word = wordsService.getRandomWord();
-    console.log(word)
-    for (let count = 0; count < word.length; count++) {
-      let p = document.createElement('p');
-      p.textContent = word[count];
-      p.setAttribute('id', 'char' + (count + 1));
-      document.getElementById("wordSearched")!.appendChild(p);
-      document.getElementById("wordSearched")!.style.color = "transparent";
+    if(this.word.split("").includes(letter)) {
+      console.log("right guess")
+    }
+    else {
+      falseChar();
+      console.log("false guess")
     }
   }
 }
+
 
 function falseChar() {
   falseChars++;
