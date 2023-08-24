@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="225" viewBox="0 0 300 225" xml:space="preserve">
-<desc>Created with Fabric.js 3.6.6</desc>
-<defs>
-</defs>
-<g transform="matrix(2.59 0 0 2.59 149.82 115.18)" style=""  >
-		<text xml:space="preserve" font-family="'Open Sans', sans-serif" font-size="18" font-style="normal" font-weight="normal" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-25.33" y="-6.14" style="fill: rgb(255,0,0); ">GAME</tspan><tspan x="-22.92" y="17.45" style="fill: rgb(255,0,0); ">OVER</tspan></text>
-</g>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null">
+   <desc stroke="null">Created with Fabric.js 3.6.6</desc>
+
+   <g stroke="null" transform="matrix(7.58406 0 0 8.13521 434.433 -916.715)">
+    <text stroke=" none" x="70.54064" y="230.25258" fill-rule=" nonzero" fill=" rgb(0,0,0)" stroke-miterlimit="4" stroke-linejoin=" miter" stroke-dashoffset="0" stroke-linecap=" butt" stroke-dasharray=" none" font-weight="normal" font-style="normal" font-size="18" font-family="'Open Sans', sans-serif" xml:space="preserve">
+     <tspan stroke="null" fill=" rgb(255,0,0)" y="152.26355" x="-50.00189">GAME</tspan>
+     <tspan stroke="null" fill=" rgb(255,0,0)" y="175.85355" x="-47.59189">OVER</tspan>
+    </text>
+   </g>
+  </g>
+ </g>
 </svg>
