@@ -1,5 +1,11 @@
 @import "../../scss/variables.scss";
 
+p {
+    text-decoration-line: underline;
+    text-underline-offset: 2.5px;
+    color: red;
+}
+
 .hangmanImg {
     color: red;
     width: 300px;
@@ -16,8 +22,6 @@
 
 .wordSearched {
     display: flex;
-    text-decoration-line: underline;
-    text-underline-offset: 2.5px;
 }
 
 .wordSearchedPosition {

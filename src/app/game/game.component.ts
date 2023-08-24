@@ -13,6 +13,7 @@ let falseChars = 0;
 
 export class GameComponent {
   public word!: string;
+  public correctGuesses = 0;
   ngOnInit() {
     this.word = wordsService.getRandomWord();
     console.log(this.word)
@@ -20,6 +21,7 @@ export class GameComponent {
       let p = document.createElement('p');
       p.textContent = this.word[count];
       p.setAttribute('id', 'char' + (count + 1));
+      p.setAttribute('class', 'underline');
       document.getElementById("wordSearched")!.appendChild(p);
       document.getElementById("wordSearched")!.style.color = "transparent";
     }
@@ -27,24 +29,40 @@ export class GameComponent {
 
   letterClicked(event: any) : void {
     let id = event.target.id;
+    let guessRight = false;
     let letter = String.fromCharCode(parseInt(id) + 64);
-    console.log(id);
+    console.log(id + ", " + letter);
     let element = document.getElementById(id);
     if (element != null)
     {
       element.style.color = "rgb(196, 196, 196)";
       element.setAttribute("style", "border: transparent");
     }
-    if(this.word.split("").includes(letter)) {
+    let positions = [];
+      for (let count2 = 0; count2 < this.word.length; count2++) {
+        if (this.word[count2].toUpperCase() == letter) {
+          positions.push(count2);
+          guessRight = true;
+        }
+      }
+    if(guessRight == true) {
       console.log("right guess")
+      for (let pos of positions){
+      document.getElementById("char" + (pos + 1))!.style.color = ("black")
+      this.correctGuesses++;
+      }
     }
     else {
-      falseChar();
       console.log("false guess")
+      falseChar();
+    }
+
+    if (this.correctGuesses == this.word.length) {
+      console.log("You won!")
+      alert("You won!")
     }
   }
 }
-
 
 function falseChar() {
   falseChars++;
