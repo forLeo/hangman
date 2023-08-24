@@ -10,8 +10,9 @@ export class WordsService {
   
   constructor() { }
 
-  getRandomWord(){
+  getRandomWord() {
     let randomNumber = Math.floor((Math.random() * this.wordList.length) + 0);
     let randomWord = this.wordList[randomNumber]
+    return randomWord;
   }
 }
