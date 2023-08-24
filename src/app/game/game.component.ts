@@ -24,10 +24,14 @@ export class GameComponent {
   }
 
   ngOnInit() {
-    let word =  wordsService.getRandomWord();
+    let word = wordsService.getRandomWord();
     console.log(word)
     for (let count = 0; count < word.length; count++) {
-      document.getElementById("wordSearched")!.appendChild(document.createElement("p")).textContent = word[count];
+      let p = document.createElement('p');
+      p.textContent = word[count];
+      p.setAttribute('id', 'char' + (count + 1));
+      document.getElementById("wordSearched")!.appendChild(p);
+      document.getElementById("wordSearched")!.style.color = "transparent";
     }
   }
 }
