@@ -4,6 +4,7 @@ import { WordsService } from "../words.service"
 let wordsService = new WordsService();
 
 let falseChars = 0;
+let end = false;
 
 @Component({
   selector: 'app-game',
@@ -20,15 +21,17 @@ export class GameComponent {
     for (let count = 0; count < this.word.length; count++) {
       let p = document.createElement('p');
       p.textContent = this.word[count];
-      p.setAttribute('id', 'char' + (count + 1));
-      p.setAttribute('class', 'underline');
+      p.setAttribute("id", "char" + (count + 1));
+      p.setAttribute("class", "underline");
       document.getElementById("wordSearched")!.appendChild(p);
       document.getElementById("wordSearched")!.style.color = "transparent";
     }
   }
 
   letterClicked(event: any) : void {
-    let id = event.target.id;
+    if (end == false)
+    {
+      let id = event.target.id;
     let guessRight = false;
     let letter = String.fromCharCode(parseInt(id) + 64);
     console.log(id + ", " + letter);
@@ -48,7 +51,7 @@ export class GameComponent {
     if(guessRight == true) {
       console.log("right guess")
       for (let pos of positions){
-      document.getElementById("char" + (pos + 1))!.style.color = ("black")
+      document.getElementById("char" + (pos + 1))!.style.color = ("black");
       this.correctGuesses++;
       }
     }
@@ -58,8 +61,10 @@ export class GameComponent {
     }
 
     if (this.correctGuesses == this.word.length) {
+      end = true;
       console.log("You won!")
       alert("You won!")
+    }
     }
   }
 }
@@ -77,5 +82,6 @@ function falseChar() {
 }
 
 function gameOver() {
+  end = true;
   console.log("Game Over!")
 }
