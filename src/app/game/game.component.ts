@@ -8,8 +8,7 @@ let end = false;
 
 @Component({
   selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  templateUrl: './game.component.html'
 })
 
 export class GameComponent {

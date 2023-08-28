@@ -1,8 +1,22 @@
 @import "../../scss/variables.scss";
 
-p {
-    width: 20px;
-    color: red;
+.underline {
+    display: inline-block;
+    position: relative;
+    border: none;
+    width: 22.5px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 22.5px;
+    height: 2px;
+    background-color: black;
 }
 
 .hangmanImg {
@@ -21,6 +35,7 @@ p {
 
 .wordSearched {
     display: flex;
+    width: 100px;
 }
 
 .wordSearchedPosition {
